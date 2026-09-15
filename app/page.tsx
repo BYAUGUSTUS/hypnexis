@@ -20,16 +20,16 @@ export default function HomePage() {
       {/* =========================================
           1. IMMERSIVE HERO SECTION WITH MORPH CANVAS
           ========================================= */}
-      <section className="snap-section w-full flex flex-col justify-between items-center px-4 sm:px-8 pt-16 sm:pt-20 pb-8 sm:pb-12 relative overflow-hidden bg-transparent">
+      <section className="snap-section w-full min-h-[100dvh] flex flex-col justify-between items-center px-4 sm:px-8 pt-20 pb-8 sm:pb-12 relative overflow-hidden bg-transparent">
         {/* Interactive Background Layer */}
         <div className="absolute inset-0 pointer-events-auto -z-10 overflow-hidden">
           <MorphBackground />
           <div className="absolute inset-0 bg-radial-[circle_at_center,transparent_20%,rgba(3,2,6,0.85)_95%] pointer-events-none" />
         </div>
 
-        {/* 10 LAKH ROTATING STAMP (Downscaled & Positioned for Mobile) */}
-        <div className="absolute top-16 sm:top-[18%] md:top-[22%] right-3 sm:right-8 md:right-12 z-30 pointer-events-none select-none scale-65 sm:scale-85 md:scale-100 origin-top-right">
-          <div className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 flex items-center justify-center">
+        {/* 10 LAKH ROTATING STAMP (Shifted up and scaled to avoid card overlap) */}
+        <div className="absolute top-16 sm:top-[16%] md:top-[20%] right-3 sm:right-8 md:right-12 z-30 pointer-events-none select-none scale-60 sm:scale-80 md:scale-100 origin-top-right">
+          <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-56 md:h-56 flex items-center justify-center">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -68,16 +68,16 @@ export default function HomePage() {
               </svg>
             </motion.div>
 
-            <div className="relative z-10 w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#ff8fab] via-[#ff5e9c] to-[#d13b7b] border-2 border-white/80 shadow-[0_0_30px_rgba(255,143,171,0.6)] flex flex-col items-center justify-center text-center">
-              <span className="text-xl sm:text-3xl md:text-4xl font-black font-sans text-black leading-none my-0.5 tracking-tight">
+            <div className="relative z-10 w-16 h-16 sm:w-22 sm:h-22 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-[#ff8fab] via-[#ff5e9c] to-[#d13b7b] border-2 border-white/80 shadow-[0_0_25px_rgba(255,143,171,0.6)] flex flex-col items-center justify-center text-center">
+              <span className="text-lg sm:text-2xl md:text-4xl font-black font-sans text-black leading-none my-0.5 tracking-tight">
                 ₹10L
               </span>
             </div>
           </div>
         </div>
 
-        {/* Center Stage: Titan Title */}
-        <div className="relative flex flex-col items-center justify-center my-auto w-full max-w-full px-2 z-20 pt-8 sm:pt-0">
+        {/* Center Stage: Hero Typography */}
+        <div className="relative flex flex-col items-center justify-center my-auto w-full max-w-full px-2 z-20 pt-10 sm:pt-0">
           <span className="text-[10px] sm:text-xs md:text-sm font-mono tracking-[0.3em] sm:tracking-[0.5em] text-[#ff8fab] uppercase mb-2 sm:mb-4">
             [ PRESENTS ]
           </span>
@@ -87,7 +87,7 @@ export default function HomePage() {
               initial={{ scale: 0.94, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="text-4xl xs:text-5xl sm:text-7xl md:text-[11vw] font-black tracking-tight uppercase leading-[0.9] sm:leading-[0.8] text-center flex flex-wrap items-center justify-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
+              className="text-4xl xs:text-5xl sm:text-7xl md:text-[11vw] font-black tracking-tight uppercase leading-[0.95] sm:leading-[0.8] text-center flex flex-wrap items-center justify-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
             >
               <span className="text-white tracking-tighter">HYPNEXIS</span>
               <span className="text-[#ff8fab] ml-1.5 sm:ml-2 tracking-tighter drop-shadow-[0_0_50px_rgba(255,143,171,0.7)]">
@@ -100,7 +100,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.25 }}
-            className="text-[11px] sm:text-sm md:text-lg text-white/70 font-light tracking-wide uppercase mt-4 sm:mt-8 text-center max-w-xs sm:max-w-xl md:max-w-3xl leading-relaxed"
+            className="text-xs sm:text-sm md:text-lg text-white/70 font-light tracking-wide uppercase mt-4 sm:mt-8 text-center max-w-xs sm:max-w-xl md:max-w-3xl leading-relaxed"
           >
             Manipal University Jaipur&apos;s Flagship Computing &amp; Communication Hackathon
           </motion.p>
@@ -137,7 +137,7 @@ export default function HomePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="flex flex-col items-center gap-1.5 opacity-50 z-20 pointer-events-none mt-4 sm:mt-0">
+        <div className="flex flex-col items-center gap-1.5 opacity-50 z-20 pointer-events-none mt-6 sm:mt-0">
           <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.25em]">
             Explore Architecture
           </span>
