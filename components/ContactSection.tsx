@@ -31,12 +31,12 @@ export default function ContactSection() {
       {/* 1. FULL-VIEWPORT BRUTALIST STATEMENT */}
       <div className="w-full my-auto py-10 sm:py-16 flex flex-col justify-center">
         <h2 className="w-full text-[14vw] sm:text-[13.5vw] font-black uppercase tracking-tighter leading-[0.82] text-white font-sans text-left">
-          LET&apos;S <br />
-          CREATE <br />
+          READY TO <br />
+          BUILD <br />
+          THE <br />
           <span className="font-editorial italic font-normal text-[#38bdf8] tracking-normal">
-            FUTURE
+            FUTURE ?
           </span> <br />
-          TOGETHER
         </h2>
       </div>
 
